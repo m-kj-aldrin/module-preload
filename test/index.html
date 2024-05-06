@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>module-preload</title>
+
+    <link rel="modulepreload" href="/src/custom-elements/base/base.js" />
+    <link rel="modulepreload" href="/src/custom-elements/A/A.js" />
+    <link rel="modulepreload" href="/src/custom-elements/B/B.js" />
+
+    <script
+      type="module"
+      src="/src/custom-elements/registerCustomElements.js"
+    ></script>
+
+    <link
+      rel="preload"
+      as="fetch"
+      href="/src/style/globalShadow.css"
+      crossorigin="anonymous"
+    />
+
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <x-a></x-a>
+    <x-b></x-b>
+  </body>
+</html>
